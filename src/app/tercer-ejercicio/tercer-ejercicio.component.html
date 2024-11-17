@@ -1,0 +1,28 @@
+<mat-card>
+    <hr/>
+    <mat-card-title>Promedio del Alumno</mat-card-title>
+    <hr/>
+    <mat-form-field>
+      <mat-label>Calificación 1</mat-label>
+      <input matInput type="number" [(ngModel)]="calificacion1" />
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-label>Calificación 2</mat-label>
+      <input matInput type="number" [(ngModel)]="calificacion2" />
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-label>Calificación 3</mat-label>
+      <input matInput type="number" [(ngModel)]="calificacion3" />
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" (click)="calcularPromedio()">
+      Calcular Promedio
+    </button>
+  
+    <mat-card-content>
+      <p *ngIf="resultado !== null">{{ resultado }}</p>
+    </mat-card-content>
+</mat-card>
+  

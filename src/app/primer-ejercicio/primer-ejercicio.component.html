@@ -1,0 +1,23 @@
+<mat-card>
+    <hr/>
+    <mat-card-title>Calculadora de Descuentos</mat-card-title>
+    <hr/>
+    <mat-form-field>
+      <mat-label>Cantidad de artículos</mat-label>
+      <input matInput type="number" [(ngModel)]="cantidad" />
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-label>Precio unitario</mat-label>
+      <input matInput type="number" [(ngModel)]="precioUnitario" />
+    </mat-form-field>
+    
+    <button mat-raised-button color="primary" (click)="calcular()">Calcular</button>
+    
+    <mat-card-content>
+      <p>Total: {{ total | currency }}</p>
+      <p>Descuento: {{ descuento | currency }}</p>
+      <p>Total con descuento: {{ totalConDescuento | currency }}</p>
+    </mat-card-content>
+</mat-card>
+  

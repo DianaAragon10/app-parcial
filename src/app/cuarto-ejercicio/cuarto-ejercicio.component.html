@@ -1,0 +1,22 @@
+<mat-card>
+    <hr/>
+    <mat-card-title>Validador de Números Perfectos</mat-card-title>
+    <hr/>
+    <mat-form-field>
+      <mat-label>Límite</mat-label>
+      <input matInput type="number" [(ngModel)]="limite" />
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" (click)="calcularNumerosPerfectos()">Calcular</button>
+  
+    <mat-card-content>
+      <ul>
+        <li *ngFor="let resultado of resultados">
+          {{ resultado.numero }} 
+          <span *ngIf="resultado.esPerfecto">(Perfecto)</span>
+          <span *ngIf="!resultado.esPerfecto">(No Perfecto)</span>
+        </li>
+      </ul>
+    </mat-card-content>
+</mat-card>
+  
